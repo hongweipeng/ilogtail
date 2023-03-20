@@ -1,0 +1,33 @@
+
+enable: true
+inputs:
+  - Type: file_log           # 文件输入类型
+    LogPath: .               # 文件路径
+    FilePattern: simple.log  # 文件名模式
+
+flushers:
+  - Type: flusher_stdout     # 标准输出流输出类型
+    OnlyStdout: true
+  - Type: flusher_brout     # 标准输出流输出类型
+    OnlyStdout: true
+  # - Type: flusher_sls
+  #   Region: cn-xxx
+  #   Endpoint: 127.0.0.1
+  #   ProjectName: test_project
+  #   LogstoreName: test_logstore
+  # - Type: flusher_otlp_log
+  #   Grpc:
+  #     Endpoint: http://127.0.0.1:80/ot
+  #     Headers:
+  #       X-AppKey: 8bc8f787-b0b2-4f26-89c6-d3950a090fef
+  #     Retry:
+  #       MaxCount: 1
+  #     Timeout: 500
+  # - Type: flusher_http
+  #   RemoteURL: http://127.0.0.1:80/upload
+  #   Headers:
+  #     x-filepath: "%{tag.__path__}"
+  #   Convert:
+  #     Protocol: custom_single
+  #     Encoding: json
+

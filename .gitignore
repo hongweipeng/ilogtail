@@ -53,6 +53,9 @@ dist
 # goland
 .idea
 
+# python
+__pycache__/
+
 # unit test
 .coretestCoverage.txt
 .testCoverage.txt

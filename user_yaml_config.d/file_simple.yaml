@@ -8,8 +8,8 @@ inputs:
 flushers:
   - Type: flusher_stdout     # 标准输出流输出类型
     OnlyStdout: true
-  - Type: flusher_brout     # 标准输出流输出类型
-    OnlyStdout: true
+  - Type: flusher_othttp     # 标准输出流输出类型
+    RemoteURL: http://127.0.0.1:80/otupload
   # - Type: flusher_sls
   #   Region: cn-xxx
   #   Endpoint: 127.0.0.1
